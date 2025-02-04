@@ -15,7 +15,12 @@ export class SearchComponent {
     this.seacrhTextChanged.emit(this.searchText)
   }
 
-  updateSearchText(event: any){
-      this.searchText = event.target.value;
+  updateSearchText(inputEL: HTMLInputElement){
+      // this.searchText = event.target.value;
+      // console.log(inputEL.value);
+      this.searchText=inputEL.value
+      this.seacrhTextChanged.emit(this.searchText)
   }
+
+  
 }
