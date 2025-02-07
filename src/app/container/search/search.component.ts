@@ -11,6 +11,13 @@ export class SearchComponent {
   //1. Create an event
   @Output() seacrhTextChanged:EventEmitter<string>=new EventEmitter<string>()
 
+
+  //Optional 2nd argument of @ViewChild()
+  //1. read: Use it to read the different token from the queries element.
+  //2. static: Determines when the query is resolved. 
+
+// True is when the view is initialized (before the first change detection) for the first time.
+// False if you want it to be resolved after every change detection
   @ViewChild('searchInput') searchInputEl:ElementRef
 
   onSeacrhTextChanged(){
